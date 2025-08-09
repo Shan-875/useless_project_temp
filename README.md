@@ -1,102 +1,262 @@
 <img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 
-# [Project Name] 🎯
-
+# ZombieCheck - The Anti-Mindless-Browsing App 
 
 ## Basic Details
-### Team Name: [Name]
-
-
+### Team Name: null pointers
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Shan V Varghese - College of Engineering Munnar
+- Member 2: Jagannath P S - College of Engineering Munnar
 
 ### Project Description
-[2-3 lines about what your project does]
+ZombieCheck is a Python-based desktop application that detects when you're mindlessly browsing or being unproductive and forces you to prove consciousness by typing random codes to continue.
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+People are turning into digital zombies! They mindlessly scroll through social media, stare blankly at screens, and lose hours without realizing it. The modern epidemic of unconscious browsing is creating a generation of productivity zombies who need intervention to regain awareness.
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+A vigilant desktop guardian that monitors your behavior patterns and interrupts zombie-like activities with mandatory consciousness verification challenges. It's like having a strict teacher who randomly asks "Are you paying attention?" but for your entire digital life!
 
 ## Technical Details
+
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- **Language:** Python 3.7+
+- **GUI Framework:** Tkinter (built-in)
+- **Threading:** For background monitoring
+- **JSON:** For data persistence
+- **Libraries:**
+  - `threading` - Background monitoring
+  - `time` - Activity tracking
+  - `random` - Code generation
+  - `string` - Character sets
+  - `json` - Stats storage
+  - `os` - File operations
+  - `datetime` - Time tracking
+  - `tkinter` - GUI components
 
 ### Implementation
-For Software:
-# Installation
-[commands]
 
-# Run
-[commands]
+#### Installation
+```bash
+# Clone the repository
+git clone https://https://github.com/Shan-875/zombiecheck-2
+cd zombiecheck-2
+
+# No additional dependencies needed - uses built-in Python libraries!
+# Just ensure you have Python 3.7+ installed
+python --version
+
+
+```
+
+#### Run
+```bash
+pip install -r requirment.txt
+# Run the application
+python app.py
+
+# Or on some systems
+python3 app.py
+```
 
 ### Project Documentation
-For Software:
 
-# Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+#### Architecture Overview
+```
+ZombieCheck Application Structure:
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+┌─────────────────────────────────────┐
+│           Main GUI Thread           │
+│  ┌─────────────────────────────────┐ │
+│  │     Main Interface              │ │
+│  │  - Control Panel                │ │
+│  │  - Stats Display                │ │
+│  │  - Settings Panel               │ │
+│  └─────────────────────────────────┘ │
+└─────────────────────────────────────┘
+                    │
+                    ▼
+┌─────────────────────────────────────┐
+│       Background Monitor Thread     │
+│  ┌─────────────────────────────────┐ │
+│  │   Activity Detection System     │ │
+│  │  - Mouse Movement Tracking      │ │
+│  │  - Keyboard Activity Monitor    │ │
+│  │  - Idle Time Calculator         │ │
+│  │  - Behavior Pattern Analysis    │ │
+│  └─────────────────────────────────┘ │
+└─────────────────────────────────────┘
+                    │
+                    ▼ (When zombie detected)
+┌─────────────────────────────────────┐
+│        Challenge Window             │
+│  ┌─────────────────────────────────┐ │
+│  │     Code Challenge System       │ │
+│  │  - Random Code Generator        │ │
+│  │  - Input Validation             │ │
+│  │  - Timer Countdown              │ │
+│  │  - Escalation Logic             │ │
+│  └─────────────────────────────────┘ │
+└─────────────────────────────────────┘
+                    │
+                    ▼
+┌─────────────────────────────────────┐
+│         Stats & Persistence         │
+│  ┌─────────────────────────────────┐ │
+│  │      Data Management            │ │
+│  │  - JSON File Storage            │ │
+│  │  - Statistics Tracking          │ │
+│  │  - Settings Persistence         │ │
+│  └─────────────────────────────────┘ │
+└─────────────────────────────────────┘
+```
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+#### Key Features Breakdown:
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+**🔍 Detection System:**
+- Monitors mouse movements and keyboard activity
+- Tracks idle time with customizable thresholds
+- Detects mindless behavior patterns (lots of mouse movement, few key presses)
+- Adjustable sensitivity levels (Low: 5min, Medium: 3min, High: 2min)
 
-For Hardware:
+**⚡ Challenge System:**
+- Generates random 8-character codes (A-Z, 0-9, excluding confusing characters)
+- Modal popup that can't be closed without correct code
+- 30-second timer with escalation on timeout
+- Nightmare mode increases code length with each incident
 
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
+**📊 Statistics Tracking:**
+- Daily and total intervention counts
+- Focus streak tracking (longest and current)
+- Average response time measurement
+- Persistent storage in JSON format
 
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
+**⚙️ Smart Features:**
+- Gaming mode (doubles thresholds during intensive tasks)
+- Sensitivity adjustment (high/medium/low)
+- Nightmare mode (progressively harder challenges)
+- Background monitoring with minimal resource usage
 
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
+#### Screenshots
 
-![Build](Add photos of build process here)
-*Explain the build steps*
 
-![Final](Add photo of final product here)
-*Explain the final build*
+*Main Zom<img width="603" height="879" alt="intro_screen" src="https://github.com/user-attachments/assets/577270f9-d26e-410a-a54e-7e69865f20f4" />
+bieCheck interface showing monitoring status, stats, and settings*
+
+
+
+<img width="1215" height="893" alt="zombie_alert" src="https://github.com/user-attachments/assets/30e4513b-54aa-49a9-bb84-aeb6bc50274f" />
+
+*Zombie detection challenge window with random code verification*
+
+
+
+<img width="952" height="884" alt="zombie_moniter" src="https://github.com/user-attachments/assets/6c70ff54-ed05-458e-b11d-912fb199d508" />
+
+*Customizable settings for sensitivity, gaming mode, and nightmare mode*
+
+#### Core Algorithm Flow:
+```python
+def monitor_behavior():
+    while monitoring_active:
+        check_idle_time()
+        analyze_activity_patterns()
+        
+        if zombie_behavior_detected():
+            trigger_challenge()
+            wait_for_response()
+            
+            if correct_response():
+                update_positive_stats()
+                reset_monitoring()
+            else:
+                escalate_difficulty()
+                retry_challenge()
+```
+
+#### File Structure:
+```
+zombiecheck/
+├── zombie_check.py          # Main application file
+├── zombie_stats.json        # Persistent stats storage (auto-generated)
+├── README.md               # This file
+├── screenshots/            # Application screenshots
+│   ├── main_interface.png
+│   ├── challenge_popup.png
+│   └── settings_panel.png
+└── requirements.txt        # Empty (uses built-in libraries only)
+```
 
 ### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
 
-# Additional Demos
-[Add any extra demo materials/links]
+#### Video Demo
+[Demo Video Link](https://drive.google.com/file/d/1uyFdBC0fiOJHuXDZLzKU717I10dEae75/view?usp=drivesdk)
+*Video demonstrates zombie detection triggers, challenge popups, successful code entry, and stats tracking*
+
+#### Live Demo Scenarios:
+
+**Scenario 1: Idle Detection**
+```
+User starts monitoring → Leaves computer idle for 3+ minutes → 
+Challenge popup appears → User types "K7M9Q3X1" → 
+Success message → Stats updated
+```
+
+**Scenario 2: Mindless Scrolling**
+```
+User scrolls repeatedly without typing → Detection algorithm triggers →
+Warning popup with code "R5N8K2M7" → User enters wrong code →
+Escalation with longer code → Correct entry → Awareness achieved
+```
+
+**Scenario 3: Nightmare Mode**
+```
+User enables nightmare mode → Gets caught multiple times →
+Code length increases: 8 chars → 10 chars → 12 chars →
+Progressively harder challenges until behavior improves
+```
+
+#### Additional Features:
+- **Persistence**: All stats and settings saved automatically
+- **Test Mode**: Manual challenge trigger for demonstration
+- **Modal Design**: Challenge can't be dismissed without correct code
+- **Visual Feedback**: Color-coded status indicators and clear messaging
+- **Cross-Platform**: Works on Windows, macOS, and Linux
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- **Shan V Varghese**: Lead developer, core monitoring algorithm, GUI design, challenge system implementation, documentation
+- **Jagannath P S**: Statistics tracking system, settings persistence, testing framework, user experience optimization
+
+## Future Enhancements
+- Browser integration for web-based zombie detection
+- Machine learning for personalized zombie pattern recognition
+- Mobile companion app
+- Team challenges and leaderboards
+- Integration with productivity tools (Pomodoro timers, task managers)
+- Voice challenges for accessibility
+- Customizable zombie detection rules
+
+## Installation Requirements
+- Python 3.7 or higher
+- No additional packages required (uses only built-in libraries)
+- 50MB free disk space
+- Works on Windows, macOS, and Linux
+
+## Usage Tips
+1. **Start with medium sensitivity** to avoid over-interruption
+2. **Enable gaming mode** when doing intensive work
+3. **Use nightmare mode** only if you need extreme intervention
+4. **Check stats regularly** to track improvement
+5. **Test the challenge** first to understand the system
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
 
 ![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
 ![Static Badge](https://img.shields.io/badge/UselessProjects--25-25?link=https%3A%2F%2Fwww.tinkerhub.org%2Fevents%2FQ2Q1TQKX6Q%2FUseless%2520Projects)
+
 
 
 
